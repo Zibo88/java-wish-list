@@ -1,6 +1,8 @@
 package org.lessons.java.christmas;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
@@ -33,15 +35,18 @@ public class Main {
 			}
 			System.out.println(lunghezzaLista + " " + "elementi");
 			
+//			Ordinare in ordine alfabetico
+			Collections.sort(listaDesideri, Comparator.naturalOrder());
+			System.out.println(listaDesideri);
+			
 			String[] arrayList = new String[ listaDesideri.size()];
 			listaDesideri.toArray(arrayList);
 			
 			for(int i = 0; i < arrayList.length;i++) {
 				if(!arrayList[i].equals(""))
+					
 				System.out.println("il tuo desiderio" + " " + arrayList[i] + " " + "si trova in posizione" + i);
 			}
-			
-	
 	}
 
 }
