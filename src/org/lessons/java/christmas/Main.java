@@ -26,14 +26,16 @@ public class Main {
 		while(!userChoiche.equals("")){
 		System.out.println("Aggiungi un altro elemento o premi enter per terminare l'operazione");
 		userChoiche = data.nextLine();
-		listaDesideri.add(userChoiche);
-		if(userChoiche.equals("")) {
+		if(!userChoiche.equals("")) {
+			listaDesideri.add(userChoiche);
+		}
+		else if(userChoiche.equals("")) {
 			System.out.println("Hai deciso di terminare");
 			data.close();
 			}
 		}
 			
-		System.out.println("La tua lista è composta da:");
+		System.out.print("La tua lista è composta da:");
 		for(int i=0; i < listaDesideri.size()-1; i++) {
 			lunghezzaLista = listaDesideri.size()-1;
 		}
